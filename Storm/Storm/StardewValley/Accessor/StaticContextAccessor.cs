@@ -123,9 +123,6 @@ namespace Storm.StardewValley.Accessor
         Texture2D _GetBuffsIcons();
         void _SetBuffsIcons(Texture2D val);
 
-        BuffsDisplayAccessor _GetBuffsDisplay();
-        void _SetBuffsDisplay(BuffsDisplayAccessor val);
-
         Texture2D _GetDaybg();
         void _SetDaybg(Texture2D val);
 
@@ -809,8 +806,6 @@ namespace Storm.StardewValley.Accessor
 
         NPCAccessor _GetObjectDialoguePortraitPerson();
         void _SetObjectDialoguePortraitPerson(NPCAccessor val);
-
-        IList _GetPurchaseAnimalStock();
 
         void _DrawBoldText(SpriteBatch b, string text, SpriteFont font, Vector2 position, Color color, float scale = 1f, float layerDepth = -1f, int boldnessOffset = 1);
         void _DrawWithShadow(SpriteBatch b, Texture2D texture, Vector2 position, Microsoft.Xna.Framework.Rectangle sourceRect, Color color, float rotation, Vector2 origin, float scale = -1f, bool flipped = false, float layerDepth = -1f, int horizontalShadowOffset = -1, int verticalShadowOffset = -1, float shadowIntensity = 0.35f);

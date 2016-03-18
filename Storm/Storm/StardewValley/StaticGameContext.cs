@@ -142,22 +142,6 @@ namespace Storm.StardewValley
 
         #endregion
 
-        #region GameLocation Events
-        public static DetourEvent PreMailboxActionCallback(GameLocationAccessor accessor)
-        {
-            var @event = new PreMailboxActionEvent(new GameLocation(WrappedGame, accessor));
-            FireEvent(@event);
-            return @event;
-        }
-        public static DetourEvent OnLoadNewAreaCallback(GameLocationAccessor accessor)
-        {
-            var @event = new OnLoadNewAreaEvent(new GameLocation(WrappedGame, accessor));
-            FireEvent(@event);
-            return @event;
-        }
-
-        #endregion
-
         #region Chatbox
 
         public static DetourEvent ChatboxTextEnteredCallback(ChatBoxAccessor accessor, TextBoxAccessor textbox)
@@ -293,15 +277,6 @@ namespace Storm.StardewValley
             FireEvent(@event);
             return @event;
         }
-
-        public static DetourEvent PerformToolActionOnChestCallback(ChestAccessor chest)
-        {
-            var @event = new PeformToolActionOnChestEvent(
-                chest == null ? null : new Chest(WrappedGame, chest));
-            FireEvent(@event);
-            return @event;
-        }
-
 
         public static DetourEvent PreUpdateCallback(StaticContextAccessor accessor)
         {
@@ -531,38 +506,34 @@ namespace Storm.StardewValley
             return @event;
         }
 
-        #endregion
-
-        #region Character Events
-        public static DetourEvent PostFarmAnimalConstructedCallback(FarmAnimalAccessor accessor)
+        public static DetourEvent DrawDialogueCallback(NPCAccessor accessor)
         {
-            var @event = new PostFarmAnimalConstructedEvent(new FarmAnimal(WrappedGame, accessor));
+            var @event = new DrawDialogueEvent(new NPC(WrappedGame, accessor));
             FireEvent(@event);
             return @event;
         }
 
-        public static DetourEvent PostFarmAnimalDayUpdateCallback(FarmAnimalAccessor accessor)
+        public static DetourEvent AddHUDMessageCallback(HUDMessageAccessor accessor)
         {
-            var @event = new PostFarmAnimalDayUpdateEvent(new FarmAnimal(WrappedGame, accessor));
-            FireEvent(@event);
-            return @event;
-        }
-        #endregion
-
-        #region CraftingRecipe Events
-        public static DetourEvent OnCreateCraftingRecipeItemCallback(CraftingRecipeAccessor recipe)
-        {
-            var @event = new OnCreateCraftingRecipeItemEvent(new CraftingRecipe(WrappedGame, recipe));
+            var @event = new AddHUDMessageEvent(new HUDMessage(WrappedGame, accessor));
             FireEvent(@event);
             return @event;
         }
 
-        public static DetourEvent OnConsumeCraftingIngredientCallback(CraftingRecipeAccessor recipe)
+        public static DetourEvent DrawWithBorderCallback(string message, Color borderColor, Color insideColor, Vector2 position, float rotate, float scale, float layerDepth, bool tiny)
         {
-            var @event = new OnConsumeCraftingIngredientEvent(new CraftingRecipe(WrappedGame, recipe));
+            var @event = new DrawWithBorderEvent(message, borderColor, insideColor, position, rotate, scale, layerDepth, tiny);
             FireEvent(@event);
             return @event;
         }
+
+        public static DetourEvent ParseTextCallback(string text, SpriteFont whichFont, int width)
+        {
+            var @event = new ParseTextEvent(text, whichFont, width);
+            FireEvent(@event);
+            return @event;
+        }
+
         #endregion
 
         #region Farmer Events
@@ -1009,31 +980,14 @@ namespace Storm.StardewValley
             return @event;
         }
 
-        #endregion
-
-        #region BuffsDisplay Events
-        
-        public static DetourEvent TryToAddFoodBuffCallback(BuffsDisplayAccessor accessor, BuffAccessor buff, int duration)
+        public static DetourEvent PreFishingRodDrawCallback(FishingRodAccessor accessor, SpriteBatch sprite)
         {
-            var @event = new TryToAddFoodBuffCallbackEvent(new BuffsDisplay(WrappedGame, accessor), new Buff(WrappedGame, buff), duration);
+            var @event = new PreFishingRodDrawEvent(
+                new FishingRod(WrappedGame, accessor),
+                sprite);
             FireEvent(@event);
             return @event;
         }
-
-        public static DetourEvent TryToAddDrinkBuffCallback(BuffsDisplayAccessor accessor, BuffAccessor buff)
-        {
-            var @event = new TryToAddDrinkBuffCallbackEvent(new BuffsDisplay(WrappedGame, accessor), new Buff(WrappedGame, buff));
-            FireEvent(@event);
-            return @event;
-        }
-
-        public static DetourEvent AddOtherBuffCallback(BuffsDisplayAccessor accessor, BuffAccessor buff)
-        {
-            var @event = new AddOtherBuffCallbackEvent(new BuffsDisplay(WrappedGame, accessor), new Buff(WrappedGame, buff));
-            FireEvent(@event);
-            return @event;
-        }
-
         #endregion
 
         #region ShopMenu Events
@@ -1149,6 +1103,19 @@ namespace Storm.StardewValley
         public static DetourEvent BobberBarUpdateCallback(BobberBarAccessor bobberBar, Microsoft.Xna.Framework.GameTime time)
         {
             var @event = new BobberBarUpdateEvent(new BobberBar(WrappedGame, bobberBar), time);
+            FireEvent(@event);
+            return @event;
+        }
+
+        #endregion
+
+        #region SpriteText
+
+        public static DetourEvent PreSpriteTextDrawStringCallback(SpriteBatch b, string s, int x, int y, int characterPosition,
+            int width, int height, float alpha, float layerDepth, bool junimoText,
+            int drawBGScroll, string placeHolderScrollWidthText, int color)
+        {
+            var @event = new PreSpriteTextDrawStringEvent(b, s, x, y, characterPosition, width, height, alpha, layerDepth, junimoText, drawBGScroll, placeHolderScrollWidthText, color);
             FireEvent(@event);
             return @event;
         }

@@ -1,5 +1,5 @@
 ﻿/*
-    Copyright 2016 Cody R. (Demmonic)
+    Copyright 2016 Zoey (Zoryn)
 
     Storm is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -15,18 +15,20 @@
     along with Storm.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-using Storm.StardewValley.Wrapper;
+using Microsoft.Xna.Framework.Graphics;
 
-namespace Storm.StardewValley.Proxy
+namespace Storm.StardewValley.Event
 {
-    public abstract class ObjectDelegate : TypeDelegate<ObjectItem>
+    public class ParseTextEvent : StaticContextEvent
     {
-        public virtual OverrideEvent DrawInMenu(object[] @params)
+        public ParseTextEvent(string text, SpriteFont whichFont, int width)
         {
-            return new OverrideEvent
-            {
-                ReturnEarly = false
-            };
+            Text = text;
+            WhichFont = whichFont;
+            Width = width;
         }
+        public string Text { get; }
+        public SpriteFont WhichFont { get; }
+        public int Width { get; }
     }
 }

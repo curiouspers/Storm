@@ -17,16 +17,14 @@
 
 using Storm.StardewValley.Wrapper;
 
-namespace Storm.StardewValley.Proxy
+namespace Storm.StardewValley.Event
 {
-    public abstract class ObjectDelegate : TypeDelegate<ObjectItem>
+    public class DrawDialogueEvent : StaticContextEvent
     {
-        public virtual OverrideEvent DrawInMenu(object[] @params)
+        public DrawDialogueEvent(NPC npc)
         {
-            return new OverrideEvent
-            {
-                ReturnEarly = false
-            };
+            NPC = npc;
         }
+        public NPC NPC { get; }
     }
 }

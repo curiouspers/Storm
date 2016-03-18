@@ -1,5 +1,5 @@
 ﻿/*
-    Copyright 2016 Cody R. (Demmonic)
+    Copyright 2016 Zoey (Zoryn)
 
     Storm is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,16 +17,15 @@
 
 using Storm.StardewValley.Wrapper;
 
-namespace Storm.StardewValley.Proxy
+namespace Storm.StardewValley.Event
 {
-    public abstract class ObjectDelegate : TypeDelegate<ObjectItem>
+    public class AddHUDMessageEvent : StaticContextEvent
     {
-        public virtual OverrideEvent DrawInMenu(object[] @params)
+        public AddHUDMessageEvent(HUDMessage hudMessage)
         {
-            return new OverrideEvent
-            {
-                ReturnEarly = false
-            };
+            HUDMessage = hudMessage;
         }
+
+        public HUDMessage HUDMessage { get; }
     }
 }

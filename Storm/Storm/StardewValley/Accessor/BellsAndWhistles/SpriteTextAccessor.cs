@@ -15,18 +15,10 @@
     along with Storm.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-using Storm.StardewValley.Wrapper;
-
-namespace Storm.StardewValley.Proxy
+namespace Storm.StardewValley.Accessor
 {
-    public abstract class ObjectDelegate : TypeDelegate<ObjectItem>
+    public interface SpriteTextAccessor
     {
-        public virtual OverrideEvent DrawInMenu(object[] @params)
-        {
-            return new OverrideEvent
-            {
-                ReturnEarly = false
-            };
-        }
+
     }
 }
