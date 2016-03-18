@@ -276,6 +276,15 @@ namespace Storm.StardewValley.Wrapper
             set { Cast<StaticContextAccessor>()._SetBuffsIcons(value); }
         }
 
+        public BuffsDisplay BuffsDisplay
+        {
+            get {
+                var tmp = Cast<StaticContextAccessor>()._GetBuffsDisplay();
+                if (tmp == null) return null;
+                return new BuffsDisplay(this, tmp);
+            }
+        }
+
         public Texture2D Daybg
         {
             get { return Cast<StaticContextAccessor>()._GetDaybg(); }
@@ -1632,6 +1641,16 @@ namespace Storm.StardewValley.Wrapper
         public void DrawHoverText(SpriteBatch b, string text, SpriteFont font, int xOffset = 0, int yOffset = 0, int moneyAmountToDisplayAtBottom = -1, string boldTitleText = null, int healAmountToDisplay = -1, string[] buffIconsToDisplay = null, ItemAccessor hoveredItem = null, int currencySymbol = 0, int extraItemToShowIndex = -1, int extraItemToShowAmount = -1, int overrideX = -1, int overrideY = -1, float alpha = 1f, CraftingRecipeAccessor craftingIngredients = null)
         {
             Cast<StaticContextAccessor>()._DrawHoverText(b, text, font, xOffset, yOffset, moneyAmountToDisplayAtBottom, boldTitleText, healAmountToDisplay, buffIconsToDisplay, hoveredItem, currencySymbol, extraItemToShowIndex, extraItemToShowAmount, overrideX, overrideY, alpha, craftingIngredients);
+        }
+
+        public ProxyList<ObjectItem> PurchaseAnimalStock
+        {
+            get
+            {
+                var tmp = Cast<StaticContextAccessor>()._GetPurchaseAnimalStock();
+                if (tmp == null) return null;
+                return new ProxyList<ObjectItem>(tmp);
+            }
         }
 
     }
