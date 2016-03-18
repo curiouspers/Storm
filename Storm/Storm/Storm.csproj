@@ -150,6 +150,7 @@
     <Compile Include="ExternalEvent\LocalModLoader.cs" />
     <Compile Include="ExternalEvent\Subscribe.cs" />
     <Compile Include="StardewValley\Accessor\BellsAndWhistles\SpriteTextAccessor.cs" />
+    <Compile Include="StardewValley\Accessor\UI\BuffAccessor.cs" />
     <Compile Include="StardewValley\Accessor\UI\HUDMessageAccessor.cs" />
     <Compile Include="StardewValley\Accessor\InputButtonAccessor.cs" />
     <Compile Include="StardewValley\Accessor\Item\SlingshotAccessor.cs" />
@@ -176,7 +177,6 @@
     <Compile Include="StardewValley\Accessor\UI\ScreenSwipeAccessor.cs" />
     <Compile Include="StardewValley\Event\BellsAndWhistles\PreSpriteTextDrawStringEvent.cs" />
     <Compile Include="StardewValley\Accessor\Utility\UtilityAccessor.cs" />
-    <Compile Include="StardewValley\Event\BobberBar\BobberBarUpdateEvent.cs" />
     <Compile Include="StardewValley\Event\Character\PostFarmAnimalConstructedEvent.cs" />
     <Compile Include="StardewValley\Event\Character\PostFarmAnimalDayUpdateEvent.cs" />
     <Compile Include="StardewValley\Accessor\UI\BuffsDisplayAccessor.cs" />
@@ -223,7 +223,7 @@
     <Compile Include="StardewValley\Event\Object\PreObjectDropInActionEvent.cs" />
     <Compile Include="StardewValley\Event\ShopMenu\PreConstructShopViaListEvent.cs" />
     <Compile Include="StardewValley\Proxy\AnimatedSpriteDelegate.cs" />
-	<Compile Include="StardewValley\Proxy\FarmAnimalDelegate.cs" />
+    <Compile Include="StardewValley\Proxy\FarmAnimalDelegate.cs" />
     <Compile Include="StardewValley\Proxy\BuffDelegate.cs" />
     <Compile Include="StardewValley\Proxy\HUDMessageDelegate.cs" />
     <Compile Include="StardewValley\Proxy\CharacterDelegate.cs" />

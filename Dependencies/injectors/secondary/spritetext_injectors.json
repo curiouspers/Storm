@@ -1,0 +1,13 @@
+{
+  "EventCallbackParams": [
+    {
+      "OwnerAccessorType": "@SpriteText",
+      "OwnerMethodName": "drawString",
+      "OwnerMethodDesc": "(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Boolean,System.Int32,System.String,System.Int32)System.Void",
+      "CallbackType": "Storm.StardewValley.StaticGameContext",
+      "StaticCallbackName": "PreSpriteTextDrawStringCallback",
+      "StaticCallbackDesc": "(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single,System.Boolean,System.Int32,System.String,System.Int32)Storm.Manipulation.DetourEvent",
+      "PushParams":"True"
+    }
+  ]
+}

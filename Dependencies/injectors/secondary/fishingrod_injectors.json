@@ -366,6 +366,15 @@
       "InstanceCallbackDesc": "(Storm.StardewValley.Accessor.FishingRodAccessor,Microsoft.Xna.Framework.GameTime,Storm.StardewValley.Accessor.FarmerAccessor)Storm.Manipulation.DetourEvent",
       "PushParams": "true",
       "InsertionType": "LAST"
+    },
+    {
+      "OwnerAccessorType": "@FishingRod",
+      "OwnerMethodName": "draw",
+      "OwnerMethodDesc": "(Microsoft.Xna.Framework.Graphics.SpriteBatch)System.Void",
+      "CallbackType": "Storm.StardewValley.StaticGameContext",
+      "InstanceCallbackName": "PreFishingRodDrawCallback",
+      "InstanceCallbackDesc": "(Storm.StardewValley.Accessor.FishingRodAccessor,Microsoft.Xna.Framework.Graphics.SpriteBatch)Storm.Manipulation.DetourEvent",
+      "PushParams": "true"
     }
   ]
 }

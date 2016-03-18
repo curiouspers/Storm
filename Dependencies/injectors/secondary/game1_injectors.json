@@ -2363,6 +2363,42 @@
       "StaticCallbackName": "ShipObjectCallback",
       "StaticCallbackDesc": "(Storm.StardewValley.Accessor.ObjectAccessor)Storm.Manipulation.DetourEvent",
       "PushParams": "true"
-    }
+    },
+	{
+	  "OwnerAccessorType": "@StaticContext",
+	  "OwnerMethodName": "drawDialogue",
+	  "OwnerMethodDesc": "(@(NPC))System.Void",
+	  "CallbackType": "Storm.StardewValley.StaticGameContext",
+	  "StaticCallbackName": "DrawDialogueCallback",
+	  "StaticCallbackDesc": "(Storm.StardewValley.Accessor.NPCAccessor)Storm.Manipulation.DetourEvent",
+	  "PushParams": "true"
+	},
+	{
+	  "OwnerAccessorType": "@StaticContext",
+	  "OwnerMethodName": "addHUDMessage",
+	  "OwnerMethodDesc": "(@(HUDMessage))System.Void",
+	  "CallbackType": "Storm.StardewValley.StaticGameContext",
+	  "StaticCallbackName": "AddHUDMessageCallback",
+	  "StaticCallbackDesc": "(Storm.StardewValley.Accessor.HUDMessageAccessor)Storm.Manipulation.DetourEvent",
+	  "PushParams": "true"
+	},
+	{
+	  "OwnerAccessorType": "@StaticContext",
+	  "OwnerMethodName": "drawWithBorder",
+	  "OwnerMethodDesc": "(System.String,Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Vector2,System.Single,System.Single,System.Single,System.Boolean)System.Void",
+	  "CallbackType": "Storm.StardewValley.StaticGameContext",
+	  "StaticCallbackName": "DrawWithBorderCallback",
+	  "StaticCallbackDesc": "(System.String,Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Color,Microsoft.Xna.Framework.Vector2,System.Single,System.Single,System.Single,System.Boolean)Storm.Manipulation.DetourEvent",
+	  "PushParams": "true"
+	},
+	{
+	  "OwnerAccessorType": "@StaticContext",
+	  "OwnerMethodName": "parseText",
+	  "OwnerMethodDesc": "(System.String,Microsoft.Xna.Framework.Graphics.SpriteFont,System.Int32)System.String",
+	  "CallbackType": "Storm.StardewValley.StaticGameContext",
+	  "StaticCallbackName": "ParseTextCallback",
+	  "StaticCallbackDesc": "(System.String,Microsoft.Xna.Framework.Graphics.SpriteFont,System.Int32)Storm.Manipulation.DetourEvent",
+	  "PushParams": "true"
+	}
   ]
 }
