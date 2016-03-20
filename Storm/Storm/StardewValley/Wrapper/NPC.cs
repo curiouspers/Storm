@@ -19,6 +19,7 @@ using System.Collections;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Storm.StardewValley.Accessor;
+using System.Collections.Generic;
 
 namespace Storm.StardewValley.Wrapper
 {
@@ -474,6 +475,12 @@ namespace Storm.StardewValley.Wrapper
         {
             get { return Cast<NPCAccessor>()._GetDaysMarried(); }
             set { Cast<NPCAccessor>()._SetDaysMarried(value); }
+        }
+
+        public Dictionary<string, string> Dialogue
+        {
+            get { return (Dictionary<string, string>)Cast<NPCAccessor>()._GetDialogue(); }
+            set { Cast<NPCAccessor>()._SetDialogue(value); }
         }
     }
 }

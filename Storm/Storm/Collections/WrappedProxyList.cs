@@ -154,7 +154,6 @@ namespace Storm.Collections
 
             public void Dispose()
             {
-                throw new NotImplementedException();
             }
 
             public bool MoveNext()

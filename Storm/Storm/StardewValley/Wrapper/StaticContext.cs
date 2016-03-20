@@ -1657,6 +1657,15 @@ namespace Storm.StardewValley.Wrapper
                 return new ProxyList<ObjectItem>(tmp);
             }
         }
+        public WrappedProxyList<NPCAccessor, NPC> AllCharacters
+        {
+            get
+            {
+                var tmp = Cast<StaticContextAccessor>()._GetAllCharacters();
+                if (tmp == null) return null;
+                return new WrappedProxyList<NPCAccessor, NPC>(tmp, i => new NPC(this, i));// ProxyList<NPC>(tmp);
+            }
+        }
 
     }
 }

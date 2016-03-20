@@ -65,15 +65,25 @@
       "InvokerReturnType": "System.Void",
       "IsStatic": "true"
     },
-	{
-      "OwnerAccessorType": "StardewValley.Utility",
-      "OwnerMethodName": "getPurchaseAnimalStock",
-      "OwnerMethodDesc": "()System.Collections.Generic.List`1",
-      "InvokerName": "_GetPurchaseAnimalStock",
-      "InvokerType": "@StaticContext",
-      "InvokerReturnParams": [ ],
-      "InvokerReturnType": "System.Collections.IList",
-      "IsStatic": "true"
+    {
+        "OwnerAccessorType": "StardewValley.Utility",
+        "OwnerMethodName": "getPurchaseAnimalStock",
+        "OwnerMethodDesc": "()System.Collections.Generic.List`1",
+        "InvokerName": "_GetPurchaseAnimalStock",
+        "InvokerType": "@StaticContext",
+        "InvokerReturnParams": [ ],
+        "InvokerReturnType": "System.Collections.IList",
+        "IsStatic": "true"
     },
+    {
+        "OwnerAccessorType": "StardewValley.Utility",
+        "OwnerMethodName": "getAllCharacters",
+        "OwnerMethodDesc": "()System.Collections.Generic.List`1",
+        "InvokerName": "_GetAllCharacters",
+        "InvokerType": "@StaticContext",
+        "InvokerReturnParams": [ ],
+        "InvokerReturnType": "System.Collections.IList",
+        "IsStatic": "true"
+    }
   ]
 }
