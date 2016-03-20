@@ -2015,6 +2015,16 @@
       ],
       "InvokerReturnType": "System.Void",
       "IsStatic": "true"
+    },
+    {
+      "OwnerAccessorType": "@StaticContext",
+      "OwnerMethodName": "drawDialogue",
+      "OwnerMethodDesc": "(StardewValley.NPC)System.Void",
+      "InvokerName": "_DrawDialogue",
+      "InvokerReturnParams": [
+        "Storm.StardewValley.Accessor.NPCAccessor"
+      ],
+      "InvokerReturnType": "System.Void"
     }
   ],
   "EventCallbackParams": [

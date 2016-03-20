@@ -30,6 +30,8 @@ namespace Storm.StardewValley.Accessor
     {
         void _AddHUDMessage(HUDMessageAccessor val);
 
+        void _DrawDialogue(NPCAccessor val);
+
         int _GetPixelZoom();
         void _SetPixelZoom(int val);
 

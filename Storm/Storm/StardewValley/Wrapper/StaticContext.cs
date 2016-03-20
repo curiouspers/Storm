@@ -1643,6 +1643,11 @@ namespace Storm.StardewValley.Wrapper
             Cast<StaticContextAccessor>()._DrawHoverText(b, text, font, xOffset, yOffset, moneyAmountToDisplayAtBottom, boldTitleText, healAmountToDisplay, buffIconsToDisplay, hoveredItem, currencySymbol, extraItemToShowIndex, extraItemToShowAmount, overrideX, overrideY, alpha, craftingIngredients);
         }
 
+        public void DrawDialogue(NPC value)
+        {
+            Cast<StaticContextAccessor>()._DrawDialogue(value?.Cast<NPCAccessor>());
+        }
+
         public ProxyList<ObjectItem> PurchaseAnimalStock
         {
             get

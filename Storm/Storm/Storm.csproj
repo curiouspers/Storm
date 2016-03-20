@@ -242,6 +242,7 @@
     <Compile Include="StardewValley\Wrapper\HUDMessage.cs" />
     <Compile Include="StardewValley\Wrapper\Horse.cs" />
     <Compile Include="StardewValley\Wrapper\BuffsDisplay.cs" />
+    <Compile Include="StardewValley\Wrapper\SpriteText.cs" />
     <Compile Include="StardewValley\Wrapper\StaticContextWrapper.cs" />
     <Compile Include="Collections\ProxyDictionary.cs" />
     <Compile Include="Collections\ValueProxyDictionary.cs" />
