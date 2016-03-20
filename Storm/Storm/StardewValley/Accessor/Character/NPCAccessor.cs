@@ -250,5 +250,8 @@ namespace Storm.StardewValley.Accessor
 
         int _GetDaysMarried();
         void _SetDaysMarried(int val);
+
+        void _SetNewDialogue(string dialogueSheetName, string dialogueSheetKey, int numberToAppend, bool add, bool clearOnMovement);
+        void _SetNewDialogue(string s, bool add, bool clearOnMovement);
     }
 }

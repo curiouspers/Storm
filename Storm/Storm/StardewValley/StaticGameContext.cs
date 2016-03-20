@@ -1204,5 +1204,19 @@ namespace Storm.StardewValley
 
         #endregion
 
+        #region NPC
+        public static DetourEvent SetNewDialogueCallback(NPCAccessor npc, string dialogueSheetName, string dialogueSheetKey, int numberToAppend, bool add, bool clearOnMovement)
+        {
+            var @event = new SetNewDialogueEvent(new NPC(WrappedGame, npc), dialogueSheetName, dialogueSheetKey, numberToAppend, add, clearOnMovement);
+            FireEvent(@event);
+            return @event;
+        }
+        public static DetourEvent SetNewDialogueCallback(NPCAccessor npc, string dialogue, bool add, bool clearOnMovement)
+        {
+            var @event = new SetNewDialogueEvent(new NPC(WrappedGame, npc), dialogue, add, clearOnMovement);
+            FireEvent(@event);
+            return @event;
+        }
+        #endregion
     }
 }

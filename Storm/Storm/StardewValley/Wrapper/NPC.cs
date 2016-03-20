@@ -482,5 +482,14 @@ namespace Storm.StardewValley.Wrapper
             get { return (Dictionary<string, string>)Cast<NPCAccessor>()._GetDialogue(); }
             set { Cast<NPCAccessor>()._SetDialogue(value); }
         }
+
+        public void SetNewDialogue(string dialogueSheetName, string dialogueSheetKey, int numberToAppend, bool add, bool clearOnMovement)
+        {
+            Cast<NPCAccessor>()._SetNewDialogue(dialogueSheetName, dialogueSheetKey, numberToAppend, add, clearOnMovement);
+        }
+        public void SetNewDialogue(string s, bool add, bool clearOnMovement)
+        {
+            Cast<NPCAccessor>()._SetNewDialogue(s, add, clearOnMovement);
+        }
     }
 }

@@ -219,6 +219,7 @@
     <Compile Include="StardewValley\Event\Game\PreNewDayEvent.cs" />
     <Compile Include="StardewValley\Event\HoeDirt\PostHoeDirtCanPlantEvent.cs" />
     <Compile Include="StardewValley\Event\HoeDirt\PostHoeDirtPlantEvent.cs" />
+    <Compile Include="StardewValley\Event\NPC\SetNewDialogueEvent.cs" />
     <Compile Include="StardewValley\Event\Object\PostObjectDropInActionEvent.cs" />
     <Compile Include="StardewValley\Event\Object\PreObjectDropInActionEvent.cs" />
     <Compile Include="StardewValley\Event\ShopMenu\PreConstructShopViaListEvent.cs" />
@@ -471,7 +472,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="StardewValley\Event\ClickableMenu\" />
-    <Folder Include="StardewValley\Event\NPC\" />
     <Folder Include="StardewValley\Event\SeedShop\" />
     <Folder Include="StardewValley\Event\TerrainFeature\" />
     <Folder Include="StardewValley\Event\Utility\" />
