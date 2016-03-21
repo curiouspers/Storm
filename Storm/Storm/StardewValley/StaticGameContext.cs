@@ -1218,5 +1218,15 @@ namespace Storm.StardewValley
             return @event;
         }
         #endregion
+
+        #region Utility
+        public static DetourEvent DrawTextWithShadowCallback(SpriteBatch b, string text, SpriteFont font, Vector2 position, Color color, float scale = 1f, float layerDepth = -1f, int horizontalShadowOffset = -1, int verticalShadowOffset = -1, float shadowIntensity = 1f, int numShadows = 3)
+        {
+            var @event = new DrawTextWithShadowEvent(b, text, font, position, color, scale = 1f, layerDepth = -1f, horizontalShadowOffset = -1, verticalShadowOffset = -1, shadowIntensity = 1f, numShadows = 3);
+            FireEvent(@event);
+            return @event;
+        }
+
+        #endregion
     }
 }

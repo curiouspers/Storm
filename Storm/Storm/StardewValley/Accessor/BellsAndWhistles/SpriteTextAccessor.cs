@@ -19,10 +19,10 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Storm.StardewValley.Accessor
 {
-    //public interface SpriteTextAccessor
-    //{
+    public interface SpriteTextAccessor
+    {
     //    void _DrawString(SpriteBatch b, string s, int x, int y, int characterPosition,
     //        int width, int height, float alpha, float layerDepth, bool junimoText,
     //        int drawBGScroll, string placeHolderScrollWidthText, int color);
-    //}
+    }
 }

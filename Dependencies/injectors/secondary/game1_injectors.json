@@ -2409,6 +2409,15 @@
 	  "StaticCallbackName": "ParseTextCallback",
 	  "StaticCallbackDesc": "(System.String,Microsoft.Xna.Framework.Graphics.SpriteFont,System.Int32)Storm.Manipulation.DetourEvent",
 	  "PushParams": "true"
-	}
+	},
+  {
+     "OwnerAccessorType": "StardewValley.Utility",
+     "OwnerMethodName": "drawTextWithShadow",
+     "OwnerMethodDesc": "(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Graphics.SpriteFont,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single,System.Single,System.Int32,System.Int32,System.Single,System.Int32)System.Void",
+     "CallbackType": "Storm.StardewValley.StaticGameContext",
+     "StaticCallbackName": "DrawTextWithShadowCallback",
+     "StaticCallbackDesc": "(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.String,Microsoft.Xna.Framework.Graphics.SpriteFont,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single,System.Single,System.Int32,System.Int32,System.Single,System.Int32)Storm.Manipulation.DetourEvent",
+     "PushParams": "true"
+  }
   ]
 }

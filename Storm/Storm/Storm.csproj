@@ -223,6 +223,7 @@
     <Compile Include="StardewValley\Event\Object\PostObjectDropInActionEvent.cs" />
     <Compile Include="StardewValley\Event\Object\PreObjectDropInActionEvent.cs" />
     <Compile Include="StardewValley\Event\ShopMenu\PreConstructShopViaListEvent.cs" />
+    <Compile Include="StardewValley\Event\Utility\DrawTextWithShadowEvent.cs" />
     <Compile Include="StardewValley\Proxy\AnimatedSpriteDelegate.cs" />
     <Compile Include="StardewValley\Proxy\FarmAnimalDelegate.cs" />
     <Compile Include="StardewValley\Proxy\BuffDelegate.cs" />
@@ -474,7 +475,6 @@
     <Folder Include="StardewValley\Event\ClickableMenu\" />
     <Folder Include="StardewValley\Event\SeedShop\" />
     <Folder Include="StardewValley\Event\TerrainFeature\" />
-    <Folder Include="StardewValley\Event\Utility\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />

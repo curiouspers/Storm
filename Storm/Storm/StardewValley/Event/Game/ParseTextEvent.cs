@@ -27,7 +27,7 @@ namespace Storm.StardewValley.Event
             WhichFont = whichFont;
             Width = width;
         }
-        public string Text { get; }
+        public string Text { get; set; }
         public SpriteFont WhichFont { get; }
         public int Width { get; }
     }
