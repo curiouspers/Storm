@@ -1202,6 +1202,33 @@ namespace Storm.StardewValley
             return @event;
         }
 
+        public static void SpriteBatchDrawStringCallback(SpriteBatch batch,SpriteFont spriteFont, string text, Vector2 position, Color color, float rotation, Vector2 origin, float scale, SpriteEffects effects, float layerDepth)
+        {
+            var @event = new SpriteBatchDrawStringEvent(text);
+            FireEvent(@event);
+            if(string.IsNullOrEmpty(@event.ReturnValue.ToString()))
+            {
+                batch.DrawString(spriteFont, text, position, color, rotation, origin, scale, effects, layerDepth);
+            }
+            else
+            {
+                batch.DrawString(spriteFont, @event.Message, position, color, rotation, origin, scale, effects, layerDepth);
+            }
+        }
+        public static void SpriteBatchDrawStringCallback(SpriteBatch batch, SpriteFont spriteFont, string text, Vector2 position, Color color)
+        {
+            var @event = new SpriteBatchDrawStringEvent(text);
+            FireEvent(@event);
+            if (string.IsNullOrEmpty(@event.ReturnValue.ToString()))
+            {
+                batch.DrawString(spriteFont, text, position, color);
+            }
+            else
+            {
+                batch.DrawString(spriteFont, @event.Message, position, color);
+            }
+        }
+
         #endregion
 
         #region NPC

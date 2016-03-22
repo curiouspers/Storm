@@ -82,7 +82,7 @@ namespace Storm
                 throw new TypeCollisionException();
             }
             var td = tds.First();
-            return td.Methods.FirstOrDefault(m => m.Name.Equals(name) && CecilUtils.DescriptionOf(m).Equals(desc));
+            return td.Methods.FirstOrDefault(m => m.Name.Equals(name) && CecilUtils.DescriptionOf(m).Equals(desc.Replace(" ", string.Empty)));
         }
 
         public static TypeReference Import(this AssemblyDefinition asm, Type t)
