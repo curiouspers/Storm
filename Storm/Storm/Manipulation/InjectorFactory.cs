@@ -63,6 +63,11 @@ namespace Storm.Manipulation
             return new MethodInfoInjector(@params);
         }
 
+        public virtual Injector CreateSpriteBatchDrawStringCallback()
+        {
+            return null;
+        }
+
         public abstract Assembly ToConcrete();
 
         public InjectionFactoryContext ParseOfType(DataFormat format, string path)
@@ -86,6 +91,8 @@ namespace Storm.Manipulation
             var list = new List<Injector>();
             var nameMap = new Dictionary<string, string>();
             var accessorMap = new Dictionary<string, string>();
+
+            list.Add(CreateSpriteBatchDrawStringCallback());
 
             var primary = Path.Combine(path, "interface_injectors.json");
             ParseJson(new FileStream(primary, FileMode.Open, FileAccess.Read), list, nameMap, accessorMap);

@@ -98,6 +98,12 @@ namespace Storm.Manipulation.Cecil
             return new CecilEventCallbackInjector(SelfAssembly, GameAssembly, @params);
         }
 
+        public override Injector CreateSpriteBatchDrawStringCallback()
+        {
+            CheckSelf();
+            return new CecilSpriteBatchDrawStringInjector(SelfAssembly, GameAssembly);
+        }
+
         public override Assembly ToConcrete()
         {
             if (refAssembly != null) return refAssembly;
