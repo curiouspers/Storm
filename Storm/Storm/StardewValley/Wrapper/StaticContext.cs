@@ -1631,7 +1631,8 @@ namespace Storm.StardewValley.Wrapper
         /// </summary>
         public void DrawTextWithShadow(SpriteBatch b, string text, SpriteFont font, Vector2 position, Color color, float scale = 1f, float layerDepth = -1f, int horizontalShadowOffset = -1, int verticalShadowOffset = -1, float shadowIntensity = 1f, int numShadows = 3)
         {
-            Cast<StaticContextAccessor>()._DrawTextWithShadow(b, text, font, position, color, scale, layerDepth, horizontalShadowOffset, verticalShadowOffset, shadowIntensity, numShadows);
+            if (Cast<StaticContextAccessor>() != null)
+                Cast<StaticContextAccessor>()._DrawTextWithShadow(b, text, font, position, color, scale, layerDepth, horizontalShadowOffset, verticalShadowOffset, shadowIntensity, numShadows);
         }
 
         /// <summary>

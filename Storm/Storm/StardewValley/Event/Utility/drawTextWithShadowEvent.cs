@@ -40,16 +40,16 @@ namespace Storm.StardewValley.Event
             NumShadows = numShadows;
         }
 
-        public SpriteBatch B { get; set; }
+        public SpriteBatch B { get; }
         public string Text { get; set; }
-        public SpriteFont Font { get; set; }
-        public Vector2 Position { get; set; }
-        public Color Color { get; set; }
-        public float Scale { get; set; }
-        public float LayerDepth { get; set; }
-        public int HorizontalShadowOffset { get; set; }
-        public int VerticalShadowOffset { get; set; }
-        public float ShadowIntensity { get; set; }
-        public int NumShadows { get; set; }
+        public SpriteFont Font { get; }
+        public Vector2 Position { get; }
+        public Color Color { get; }
+        public float Scale { get; }
+        public float LayerDepth { get; }
+        public int HorizontalShadowOffset { get; }
+        public int VerticalShadowOffset { get; }
+        public float ShadowIntensity { get; }
+        public int NumShadows { get; }
     }
 }

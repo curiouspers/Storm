@@ -32,7 +32,7 @@ namespace Storm.StardewValley.Event
             LayerDepth = layerDepth;
             Tiny = tiny;
         }
-        public string Message { get; set; }
+        public string Message { get; }
         public Color BorderColor { get; }
         public Color InsideColor { get; }
         public Vector2 Position { get; }
