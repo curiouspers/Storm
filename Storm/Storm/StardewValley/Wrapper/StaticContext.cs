@@ -1597,10 +1597,16 @@ namespace Storm.StardewValley.Wrapper
 
         public Texture2D LoadResource(string path)
         {
-            var fs = new FileStream(path, FileMode.Open);
-            var tex = Texture2D.FromStream(Graphics.GraphicsDevice, fs);
-            fs.Close();
-            return tex;
+            using (Stream fileStream = File.OpenRead(path))
+            {
+                Texture2D texture = Texture2D.FromStream(Graphics.GraphicsDevice, fileStream);
+                Color[] data = new Color[texture.Width * texture.Height];
+                texture.GetData(data);
+                for (int i = 0; i != data.Length; ++i)
+                    data[i] = Color.FromNonPremultiplied(data[i].ToVector4());
+                texture.SetData(data);
+                return texture;
+            }
         }
 
         public bool IsFestivalDay(int day, string season)
