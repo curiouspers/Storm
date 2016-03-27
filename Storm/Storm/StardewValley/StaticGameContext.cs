@@ -140,6 +140,19 @@ namespace Storm.StardewValley
             return @event;
         }
 
+        public static DetourEvent GetRandomNameCallback()
+        {
+            var @event = new GetRandomNameEvent();
+            FireEvent(@event);
+            return @event;
+        }
+        public static DetourEvent GetOtherFarmerNamesCallback()
+        {
+            var @event = new GetOtherFarmerNamesEvent();
+            FireEvent(@event);
+            return @event;
+        }
+
         #endregion
 
         #region GameLocation Events

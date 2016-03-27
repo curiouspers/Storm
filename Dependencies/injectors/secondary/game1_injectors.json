@@ -2463,6 +2463,22 @@
             "StaticCallbackName": "PreSpriteTextGetWidthOfStringCallback",
             "StaticCallbackDesc": "(System.String)Storm.Manipulation.DetourEvent",
             "PushParams": "True"
+        },
+        {
+            "OwnerAccessorType": "StardewValley.Dialogue",
+            "OwnerMethodName": "randomName",
+            "OwnerMethodDesc": "()System.String",
+            "CallbackType": "Storm.StardewValley.StaticGameContext",
+            "StaticCallbackName": "GetRandomNameCallback",
+            "StaticCallbackDesc": "()Storm.Manipulation.DetourEvent"
+        },
+        {
+            "OwnerAccessorType": "StardewValley.Utility",
+            "OwnerMethodName": "getOtherFarmerNames",
+            "OwnerMethodDesc": "()System.Collections.Generic.List`1",
+            "CallbackType": "Storm.StardewValley.StaticGameContext",
+            "StaticCallbackName": "GetOtherFarmerNamesCallback",
+            "StaticCallbackDesc": "()Storm.Manipulation.DetourEvent"
         }
     ]
 }
