@@ -70,4 +70,47 @@ namespace Storm.Manipulation.Cecil
             }
         }
     }
+
+    public class CecilSpriteFontMeasureString : Injector
+    {
+        private readonly AssemblyDefinition def;
+        private readonly AssemblyDefinition self;
+        private List<MethodDefinition> injectees;
+        private MethodReference Callback;
+
+        public CecilSpriteFontMeasureString(AssemblyDefinition self, AssemblyDefinition def)
+        {
+            this.self = self;
+            this.def = def;
+        }
+        public object GetParams()
+        {
+            return null;
+        }
+
+        public void Init()
+        {
+            injectees = def.Modules.SelectMany(mod => ModuleDefinitionRocks.GetAllTypes(mod))
+                .SelectMany(t => t.Methods)
+                .Where(method => null != method.Body).ToList();
+
+            var CallbackMethod = typeof(StaticGameContext).GetMethod("SpriteFontMeasureStringCallback", new Type[] { typeof(SpriteFont), typeof(string) });
+            Callback = def.MainModule.Import(CallbackMethod);
+        }
+
+        public void Inject()
+        {
+            foreach (var body in injectees.Select(m => m.Body))
+            {
+                var processor = body.GetILProcessor();
+                var instructions = body.Instructions.Where(instr => instr.OpCode == OpCodes.Callvirt && instr.ToString().Contains("SpriteFont::MeasureString")).ToList();
+                foreach (var instr in instructions)
+                {
+                    var meth = instr.Operand as MethodReference;
+                    var writeInstruction = processor.Create(OpCodes.Call, Callback);
+                    processor.Replace(instr, writeInstruction);
+                }
+            }
+        }
+    }
 }

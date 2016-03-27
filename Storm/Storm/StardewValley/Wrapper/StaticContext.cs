@@ -1672,6 +1672,13 @@ namespace Storm.StardewValley.Wrapper
                 return new WrappedProxyList<NPCAccessor, NPC>(tmp, i => new NPC(this, i));// ProxyList<NPC>(tmp);
             }
         }
-
+        public void DrawString(SpriteBatch b, string s, int x, int y, int characterPosition, int width, int height, float alpha, float layerDepth, bool junimoText, int drawBGScroll, string placeHolderScrollWidthText, int color)
+        {
+            Cast<StaticContextAccessor>()._DrawString(b, s, x, y, characterPosition, width, height, alpha, layerDepth, junimoText, drawBGScroll, placeHolderScrollWidthText, color);
+        }
+        public int GetWidthOfString(string s)
+        {
+            return Cast<StaticContextAccessor>()._GetWidthOfString(s);
+        }
     }
 }

@@ -103,6 +103,11 @@ namespace Storm.Manipulation.Cecil
             CheckSelf();
             return new CecilSpriteBatchDrawStringInjector(SelfAssembly, GameAssembly);
         }
+        public override Injector CreateSpriteFontMeasureStringCallback()
+        {
+            CheckSelf();
+            return new CecilSpriteFontMeasureString(SelfAssembly, GameAssembly);
+        }
 
         public override Assembly ToConcrete()
         {

@@ -68,6 +68,11 @@ namespace Storm.Manipulation
             return null;
         }
 
+        public virtual Injector CreateSpriteFontMeasureStringCallback()
+        {
+            return null;
+        }
+
         public abstract Assembly ToConcrete();
 
         public InjectionFactoryContext ParseOfType(DataFormat format, string path)
@@ -93,6 +98,7 @@ namespace Storm.Manipulation
             var accessorMap = new Dictionary<string, string>();
 
             list.Add(CreateSpriteBatchDrawStringCallback());
+            list.Add(CreateSpriteFontMeasureStringCallback());
 
             var primary = Path.Combine(path, "interface_injectors.json");
             ParseJson(new FileStream(primary, FileMode.Open, FileAccess.Read), list, nameMap, accessorMap);

@@ -15,4 +15,13 @@ namespace Storm.StardewValley.Event
 
         public string Message { get; }
     }
+    public class SpriteFontMeasureStringEvent : StaticContextEvent
+    {
+        public SpriteFontMeasureStringEvent(string message)
+        {
+            Message = message;
+        }
+
+        public string Message { get; }
+    }
 }

@@ -1202,6 +1202,13 @@ namespace Storm.StardewValley
             return @event;
         }
 
+        public static DetourEvent PreSpriteTextGetWidthOfStringCallback(string text)
+        {
+            var @event = new SpriteTextGetWidthOfStringEvent(text);
+            FireEvent(@event);
+            return @event;
+        }
+
         public static void SpriteBatchDrawStringCallback(SpriteBatch batch,SpriteFont spriteFont, string text, Vector2 position, Color color, float rotation, Vector2 origin, float scale, SpriteEffects effects, float layerDepth)
         {
             var @event = new SpriteBatchDrawStringEvent(text);
@@ -1226,6 +1233,20 @@ namespace Storm.StardewValley
             else
             {
                 batch.DrawString(spriteFont, (string)@event.ReturnValue, position, color);
+            }
+        }
+
+        public static Vector2 SpriteFontMeasureStringCallback(SpriteFont spriteFont, string text)
+        {
+            var @event = new SpriteFontMeasureStringEvent(text);
+            FireEvent(@event);
+            if (string.IsNullOrEmpty((string)@event.ReturnValue))
+            {
+                return spriteFont.MeasureString(text);
+            }
+            else
+            {
+                return spriteFont.MeasureString((string)@event.ReturnValue);
             }
         }
 

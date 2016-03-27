@@ -821,5 +821,7 @@ namespace Storm.StardewValley.Accessor
         void _DrawTextWithShadow(SpriteBatch b, string text, SpriteFont font, Vector2 position, Color color, float scale = 1f, float layerDepth = -1f, int horizontalShadowOffset = -1, int verticalShadowOffset = -1, float shadowIntensity = 1f, int numShadows = 3);
 
         void _DrawHoverText(SpriteBatch b, string text, SpriteFont font, int xOffset = 0, int yOffset = 0, int moneyAmountToDisplayAtBottom = -1, string boldTitleText = null, int healAmountToDisplay = -1, string[] buffIconsToDisplay = null, ItemAccessor hoveredItem = null, int currencySymbol = 0, int extraItemToShowIndex = -1, int extraItemToShowAmount = -1, int overrideX = -1, int overrideY = -1, float alpha = 1f, CraftingRecipeAccessor craftingIngredients = null);
+        void _DrawString(SpriteBatch b, string s, int x, int y, int characterPosition, int width, int height, float alpha, float layerDepth, bool junimoText, int drawBGScroll, string placeHolderScrollWidthText, int color);
+        int _GetWidthOfString(string s);
     }
 } 

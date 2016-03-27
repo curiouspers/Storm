@@ -1,5 +1,5 @@
 ﻿/*
-    Copyright 2016 Cody R. (Demmonic)
+    Copyright 2016 Shane Filiatrault
 
     Storm is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -15,14 +15,19 @@
     along with Storm.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Storm.StardewValley.Wrapper;
 
-namespace Storm.StardewValley.Accessor
+namespace Storm.StardewValley.Event
 {
-    //public interface SpriteTextAccessor
-    //{
-    //    void _DrawString(SpriteBatch b, string s, int x, int y, int characterPosition,
-    //        int width, int height, float alpha, float layerDepth, bool junimoText,
-    //        int drawBGScroll, string placeHolderScrollWidthText, int color);
-    //}
+    public class SpriteTextGetWidthOfStringEvent : StaticContextEvent
+    {
+        public SpriteTextGetWidthOfStringEvent(string text)
+        {
+            Text = text;
+        }
+        
+        public string Text { get; set; }
+    }
 }
