@@ -1352,7 +1352,11 @@ namespace Storm.StardewValley.Wrapper
             {
                 var tmp = Cast<StaticContextAccessor>()._GetActiveClickableMenu();
                 if (tmp == null) return null;
-                return new ClickableMenu(this, tmp);
+                else if (tmp is GameMenuAccessor)
+                {
+                    return new GameMenu(this, tmp as GameMenuAccessor);
+                }
+                else return new ClickableMenu(this, tmp);
             }
             set { Cast<StaticContextAccessor>()._SetActiveClickableMenu(value?.Cast<ClickableMenuAccessor>()); }
         }
