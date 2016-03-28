@@ -289,11 +289,6 @@
       "SimpleName": "Utility",
       "OwnerType": "StardewValley.Game1",
       "InterfaceType": "Storm.StardewValley.Accessor.UtilityAccessor"
-    },
-    {
-      "SimpleName": "SpriteText",
-      "OwnerType": "StardewValley.BellsAndWhistles.SpriteText",
-      "InterfaceType": "Storm.StardewValley.Accessor.SpriteTextAccessor"
     }
   ]
 }
