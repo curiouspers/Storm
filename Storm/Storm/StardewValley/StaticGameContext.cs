@@ -1206,26 +1206,26 @@ namespace Storm.StardewValley
         {
             var @event = new SpriteBatchDrawStringEvent(text);
             FireEvent(@event);
-            if(string.IsNullOrEmpty(@event.ReturnValue.ToString()))
+            if(@event.ReturnValue == null || string.IsNullOrEmpty(@event.ReturnValue.ToString()))
             {
                 batch.DrawString(spriteFont, text, position, color, rotation, origin, scale, effects, layerDepth);
             }
             else
             {
-                batch.DrawString(spriteFont, @event.Message, position, color, rotation, origin, scale, effects, layerDepth);
+                batch.DrawString(spriteFont, @event.ReturnValue.ToString(), position, color, rotation, origin, scale, effects, layerDepth);
             }
         }
         public static void SpriteBatchDrawStringCallback(SpriteBatch batch, SpriteFont spriteFont, string text, Vector2 position, Color color)
         {
             var @event = new SpriteBatchDrawStringEvent(text);
             FireEvent(@event);
-            if (string.IsNullOrEmpty(@event.ReturnValue.ToString()))
+            if (@event.ReturnValue == null || string.IsNullOrEmpty(@event.ReturnValue.ToString()))
             {
                 batch.DrawString(spriteFont, text, position, color);
             }
             else
             {
-                batch.DrawString(spriteFont, @event.Message, position, color);
+                batch.DrawString(spriteFont, @event.ReturnValue.ToString(), position, color);
             }
         }
 
