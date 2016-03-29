@@ -67,7 +67,18 @@ namespace Storm.StardewValley.Wrapper
             {
                 var tmp = Cast<GameMenuAccessor>()._GetPages();
                 if (tmp == null) return null;
-                return new WrappedProxyList<ClickableMenuAccessor, ClickableMenu>(tmp, i => i == null ? null : new ClickableMenu(Parent, i));
+                return new WrappedProxyList<ClickableMenuAccessor, ClickableMenu>(tmp, i =>
+                {
+                    if (i != null)
+                    {
+                        if (i is OptionsPageAccessor)
+                        {
+                            return new OptionsPage(Parent, i as OptionsPageAccessor);
+                        }
+                        else return new ClickableMenu(Parent, i);
+                    }
+                    else return null;
+                });
             }
         }
     }

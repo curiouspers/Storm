@@ -1352,7 +1352,11 @@ namespace Storm.StardewValley.Wrapper
             {
                 var tmp = Cast<StaticContextAccessor>()._GetActiveClickableMenu();
                 if (tmp == null) return null;
-                return new ClickableMenu(this, tmp);
+                else if (tmp is GameMenuAccessor)
+                {
+                    return new GameMenu(this, tmp as GameMenuAccessor);
+                }
+                else return new ClickableMenu(this, tmp);
             }
             set { Cast<StaticContextAccessor>()._SetActiveClickableMenu(value?.Cast<ClickableMenuAccessor>()); }
         }
@@ -1597,10 +1601,16 @@ namespace Storm.StardewValley.Wrapper
 
         public Texture2D LoadResource(string path)
         {
-            var fs = new FileStream(path, FileMode.Open);
-            var tex = Texture2D.FromStream(Graphics.GraphicsDevice, fs);
-            fs.Close();
-            return tex;
+            using (Stream fileStream = File.OpenRead(path))
+            {
+                Texture2D texture = Texture2D.FromStream(Graphics.GraphicsDevice, fileStream);
+                Color[] data = new Color[texture.Width * texture.Height];
+                texture.GetData(data);
+                for (int i = 0; i != data.Length; ++i)
+                    data[i] = Color.FromNonPremultiplied(data[i].ToVector4());
+                texture.SetData(data);
+                return texture;
+            }
         }
 
         public bool IsFestivalDay(int day, string season)
@@ -1667,6 +1677,13 @@ namespace Storm.StardewValley.Wrapper
                 return new WrappedProxyList<NPCAccessor, NPC>(tmp, i => new NPC(this, i));// ProxyList<NPC>(tmp);
             }
         }
-
+        public void DrawString(SpriteBatch b, string s, int x, int y, int characterPosition, int width, int height, float alpha, float layerDepth, bool junimoText, int drawBGScroll, string placeHolderScrollWidthText, int color)
+        {
+            Cast<StaticContextAccessor>()._DrawString(b, s, x, y, characterPosition, width, height, alpha, layerDepth, junimoText, drawBGScroll, placeHolderScrollWidthText, color);
+        }
+        public int GetWidthOfString(string s)
+        {
+            return Cast<StaticContextAccessor>()._GetWidthOfString(s);
+        }
     }
 }
