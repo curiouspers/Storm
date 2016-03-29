@@ -9,12 +9,12 @@ namespace Storm.StardewValley.Accessor
 {
     public interface OptionsElementAccessor
     {
-        int _GetWhichOption();
-        void _SetWhichOption(int val);
+        //int _GetWhichOption();
+        //void _SetWhichOption(int val);
     }
     public interface OptionsDropDownAccessor : OptionsElementAccessor
     {
-        IList _GetDropDownOptions();
-        void _SetDropDownOptions(IList val);
+        //IList _GetDropDownOptions();
+        //void _SetDropDownOptions(IList val);
     }
 }

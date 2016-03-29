@@ -42,10 +42,6 @@ namespace Storm.Manipulation.Cecil
 
         public void Init()
         {
-            if(@params.OwnerMethodName == "changeDropDownOption")
-            {
-
-            }
             injectee = def.GetMethod(@params.OwnerType, @params.OwnerMethodName, @params.OwnerMethodDesc);
             if (injectee == null)
             {

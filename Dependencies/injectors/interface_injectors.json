@@ -289,6 +289,16 @@
       "SimpleName": "Utility",
       "OwnerType": "StardewValley.Game1",
       "InterfaceType": "Storm.StardewValley.Accessor.UtilityAccessor"
+    },
+    {
+      "SimpleName": "OptionsDropDown",
+      "OwnerType": "StardewValley.Menus.OptionsDropDown",
+      "InterfaceType": "Storm.StardewValley.Accessor.OptionsDropDownAccessor"
+    },
+    {
+      "SimpleName": "OptionsElement",
+      "OwnerType": "StardewValley.Menus.OptionsElement",
+      "InterfaceType": "Storm.StardewValley.Accessor.OptionsElementAccessor"
     }
   ]
 }

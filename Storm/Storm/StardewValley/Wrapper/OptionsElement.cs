@@ -16,21 +16,21 @@ namespace Storm.StardewValley.Wrapper
         }
         public OptionsElement() { }
 
-        public int WhichOption
-        {
-            get { return Cast<OptionsElementAccessor>()._GetWhichOption(); }
-            set { Cast<OptionsElementAccessor>()._SetWhichOption(value); }
-        }
+        //public int WhichOption
+        //{
+        //    get { return Cast<OptionsElementAccessor>()._GetWhichOption(); }
+        //    set { Cast<OptionsElementAccessor>()._SetWhichOption(value); }
+        //}
     }
 
     public class OptionsDropDown : OptionsElement
     {
 
-        public IList DropDownOptions
-        {
-            get { return Cast<OptionsDropDownAccessor>()._GetDropDownOptions(); }
-            set { Cast<OptionsDropDownAccessor>()._SetDropDownOptions(value); }
-        }
+        //public IList DropDownOptions
+        //{
+        //    get { return Cast<OptionsDropDownAccessor>()._GetDropDownOptions(); }
+        //    set { Cast<OptionsDropDownAccessor>()._SetDropDownOptions(value); }
+        //}
 
         public OptionsDropDown(StaticContext parent, OptionsDropDownAccessor accessor) : base(parent, accessor)
         {
