@@ -173,6 +173,7 @@
     <Compile Include="StardewValley\Accessor\UI\ClickableAnimatedComponentAccessor.cs" />
     <Compile Include="StardewValley\Accessor\UI\JunimoNoteMenuAccessor.cs" />
     <Compile Include="StardewValley\Accessor\UI\MenuWithInventoryAccessor.cs" />
+    <Compile Include="StardewValley\Accessor\UI\OptionElementAccessor.cs" />
     <Compile Include="StardewValley\Accessor\UI\OptionsPageAccessor.cs" />
     <Compile Include="StardewValley\Accessor\UI\ScreenSwipeAccessor.cs" />
     <Compile Include="StardewValley\Event\BellsAndWhistles\SpriteTextGetWidthOfStringEvent.cs" />
@@ -225,6 +226,7 @@
     <Compile Include="StardewValley\Event\NPC\SetNewDialogueEvent.cs" />
     <Compile Include="StardewValley\Event\Object\PostObjectDropInActionEvent.cs" />
     <Compile Include="StardewValley\Event\Object\PreObjectDropInActionEvent.cs" />
+    <Compile Include="StardewValley\Event\SetDropDownOptionsEvent.cs" />
     <Compile Include="StardewValley\Event\ShopMenu\PreConstructShopViaListEvent.cs" />
     <Compile Include="StardewValley\Event\Utility\DrawTextWithShadowEvent.cs" />
     <Compile Include="StardewValley\Proxy\AnimatedSpriteDelegate.cs" />
@@ -247,6 +249,8 @@
     <Compile Include="StardewValley\Wrapper\HUDMessage.cs" />
     <Compile Include="StardewValley\Wrapper\Horse.cs" />
     <Compile Include="StardewValley\Wrapper\BuffsDisplay.cs" />
+    <Compile Include="StardewValley\Wrapper\Options.cs" />
+    <Compile Include="StardewValley\Wrapper\OptionsElement.cs" />
     <Compile Include="StardewValley\Wrapper\OptionsPage.cs" />
     <Compile Include="StardewValley\Wrapper\StaticContextWrapper.cs" />
     <Compile Include="Collections\ProxyDictionary.cs" />

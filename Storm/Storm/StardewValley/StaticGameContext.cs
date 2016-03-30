@@ -572,6 +572,20 @@ namespace Storm.StardewValley
             return @event;
         }
 
+        public static DetourEvent ChangeDropDownOptionCallback(OptionsAccessor accessor, int which, int selection, List<string> options)
+        {
+            var @event = new ChangeDropDownOptionsEvent(new Options(WrappedGame, accessor), which, selection, options);
+            FireEvent(@event);
+            return @event;
+        }
+
+        public static DetourEvent SetDropDownToProperValueCallback(OptionsAccessor accessor, OptionsDropDownAccessor dropDown)
+        {
+            var @event = new SetDropDownToProperValueEvent(new Options(WrappedGame, accessor), new OptionsDropDown(WrappedGame, dropDown));
+            FireEvent(@event);
+            return @event;
+        }
+
         #endregion
 
         #region Character Events

@@ -2479,6 +2479,24 @@
             "CallbackType": "Storm.StardewValley.StaticGameContext",
             "StaticCallbackName": "GetOtherFarmerNamesCallback",
             "StaticCallbackDesc": "()Storm.Manipulation.DetourEvent"
+        },
+        {
+            "OwnerAccessorType": "StardewValley.Options",
+            "OwnerMethodName": "changeDropDownOption",
+            "OwnerMethodDesc": "(System.Int32,System.Int32,System.Collections.Generic.List`1)System.Void",
+            "CallbackType": "Storm.StardewValley.StaticGameContext",
+            "InstanceCallbackName": "ChangeDropDownOptionCallback",
+            "InstanceCallbackDesc": "(Storm.StardewValley.Accessor.OptionsAccessor,System.Int32,System.Int32,System.Collections.Generic.List`1)Storm.Manipulation.DetourEvent",
+            "PushParams": "true"
+        },
+        {
+            "OwnerAccessorType": "StardewValley.Options",
+            "OwnerMethodName": "setDropDownToProperValue",
+            "OwnerMethodDesc": "(StardewValley.Menus.OptionsDropDown)System.Void",
+            "CallbackType": "Storm.StardewValley.StaticGameContext",
+            "InstanceCallbackName": "SetDropDownToProperValueCallback",
+            "InstanceCallbackDesc": "(Storm.StardewValley.Accessor.OptionsAccessor,Storm.StardewValley.Accessor.OptionsDropDownAccessor)Storm.Manipulation.DetourEvent",
+            "PushParams": "true"
         }
     ]
 }
