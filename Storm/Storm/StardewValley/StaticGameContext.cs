@@ -315,7 +315,6 @@ namespace Storm.StardewValley
             return @event;
         }
 
-
         public static DetourEvent PreUpdateCallback(StaticContextAccessor accessor)
         {
             var @event = new PreUpdateEvent();
@@ -582,6 +581,13 @@ namespace Storm.StardewValley
         public static DetourEvent SetDropDownToProperValueCallback(OptionsAccessor accessor, OptionsDropDownAccessor dropDown)
         {
             var @event = new SetDropDownToProperValueEvent(new Options(WrappedGame, accessor), new OptionsDropDown(WrappedGame, dropDown));
+            FireEvent(@event);
+            return @event;
+        }
+
+        public static DetourEvent StringBrokeIntoSectionsCallback(string s, int width, int height)
+        {
+            var @event = new StringBrokeIntoSectionsEvent(s, width, height);
             FireEvent(@event);
             return @event;
         }
