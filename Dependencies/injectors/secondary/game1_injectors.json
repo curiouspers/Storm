@@ -2465,6 +2465,15 @@
             "PushParams": "True"
         },
         {
+            "OwnerAccessorType": "StardewValley.BellsAndWhistles.SpriteText",
+            "OwnerMethodName": "getStringBrokenIntoSectionsOfHeight",
+            "OwnerMethodDesc": "(System.String,System.Int32,System.Int32)System.Collections.Generic.List`1",
+            "CallbackType": "Storm.StardewValley.StaticGameContext",
+            "StaticCallbackName": "StringBrokeIntoSectionsCallback",
+            "StaticCallbackDesc": "(System.String,System.Int32,System.Int32)Storm.Manipulation.DetourEvent",
+            "PushParams": "true"
+        },
+        {
             "OwnerAccessorType": "StardewValley.Dialogue",
             "OwnerMethodName": "randomName",
             "OwnerMethodDesc": "()System.String",

@@ -208,6 +208,7 @@
     <Compile Include="StardewValley\Event\FishingRod\PostPullFishFromWaterEvent.cs" />
     <Compile Include="StardewValley\Event\FishingRod\PreFishingRodDrawEvent.cs" />
     <Compile Include="StardewValley\Event\FishingRod\PreFishingRodTickUpdateEvent.cs" />
+    <Compile Include="StardewValley\Event\Game\StringBrokeIntoSectionsEvent.cs" />
     <Compile Include="StardewValley\Event\Game\AddHubMessageEvent.cs" />
     <Compile Include="StardewValley\Event\Game\DrawDialogueEvent.cs" />
     <Compile Include="StardewValley\Event\GameLocation\PreMailboxActionEvent.cs" />
